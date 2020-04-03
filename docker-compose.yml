@@ -16,6 +16,6 @@ services:
       - 5601:5601
     networks: [elastic]
     volumes:
-      - ./docker/elasticsearch/config/kibana.yml:/usr/share/kibana/config/kibana.yml
+      - ./docker/kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml
 networks:
   elastic:

@@ -6,6 +6,9 @@ services:
       - discovery.type=single-node
     ports:
       - 9200:9200
+    volumes:
+      - ./docker/elasticsearch/data:/usr/share/elasticsearch/data
+      - ./docker/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
   kibana:
     image: docker.elastic.co/kibana/kibana:7.6.2
     ports:
